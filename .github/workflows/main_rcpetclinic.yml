@@ -28,7 +28,7 @@ jobs:
         run: mvn --batch-mode verify
 
       - name: List downloaded files1
-        run: ls -lah
+        run: ls -la
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -39,7 +39,7 @@ jobs:
           retention-days: 30
 
       - name: List downloaded files2
-        run: ls -lah
+        run: ls -l
 
 
   deploy:
