@@ -64,9 +64,7 @@ jobs:
         java-package: jdk
         
     - name: Run Maven build
-      #run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
-      working-directory: petstore/petstoreapp
-      run: mvn --batch-mode verify
+      run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
         
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
