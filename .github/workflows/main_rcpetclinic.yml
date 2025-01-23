@@ -28,7 +28,7 @@ jobs:
         run: mvn clean install
 
       - name: List downloaded files1
-        run: echo "ls -la"
+        run: ls -l
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
