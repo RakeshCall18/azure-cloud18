@@ -28,13 +28,12 @@ jobs:
         run: mvn clean install
 
       - name: List downloaded files1
-        run: ls -la
+        run: echo "ls -la"
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          #name: java-app
-          name: petstoreapp
+          name: java-app
           #path: '${{ github.workspace }}/target/*.jar'
           path:  target/*.jar 
           retention-days: 30
@@ -54,8 +53,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: petstoreapp
-          #name: java-app
+          name: java-app
           #path: '${{ github.workspace }}/target/*.jar'
           path: download/
 
