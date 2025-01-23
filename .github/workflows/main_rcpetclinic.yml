@@ -26,6 +26,9 @@ jobs:
         #run: mvn clean install
         working-directory: petstore/petstoreapp
         run: mvn --batch-mode verify
+
+      - name: List downloaded files1
+        run: ls -lah
         
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -35,7 +38,7 @@ jobs:
           path:  target/*.jar 
           retention-days: 30
 
-      - name: List downloaded files
+      - name: List downloaded files2
         run: ls -lah
 
 
