@@ -23,9 +23,9 @@ jobs:
           distribution: temurin
 
       - name: Build with Maven
-        #run: mvn clean install
         working-directory: petstore/petstoreapp
-        run: mvn --batch-mode verify
+        #run: mvn --batch-mode verify
+        run: mvn clean install
 
       - name: List downloaded files1
         run: ls -la
