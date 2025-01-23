@@ -60,6 +60,7 @@ jobs:
       with:
         java-version: '17'
         distribution: "temurin"
+        java-package: jdk
         
     - name: Run Maven build
       run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
