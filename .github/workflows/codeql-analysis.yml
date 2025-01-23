@@ -59,7 +59,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'adopt'
+        distribution: "temurin"
         
     - name: Run Maven build
       run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
