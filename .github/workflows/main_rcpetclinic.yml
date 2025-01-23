@@ -55,7 +55,7 @@ jobs:
         with:
           name: java-app
           #path: '${{ github.workspace }}/target/*.jar'
-          path: /download
+          path: download/
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
