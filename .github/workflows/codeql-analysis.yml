@@ -54,8 +54,6 @@ jobs:
     # If this step fails, then you should remove it and run the build manually (see below)
     #- name: Autobuild
     #  uses: github/codeql-action/autobuild@v3
-    - name: Debug Workflow Inputs
-      run: echo 'Java version:17'
 
     
     - name: Building Pet Store App with Java 13
@@ -66,7 +64,9 @@ jobs:
         java-package: jdk
         
     - name: Run Maven build
-      run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
+      #run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
+      working-directory: petstore/petstoreapp
+      run: mvn --batch-mode verify
         
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
