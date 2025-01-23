@@ -66,7 +66,6 @@ jobs:
         server-username: ${{ secrets.GITHUB_ACTOR }}
         server-password: ${{ secrets.GITHUB_TOKEN }}
         overwrite-settings: true
-        token: ${{ token }}
         
     - name: Run Maven build
       run: mvn -f petstore/petstoreapp/pom.xml --batch-mode --update-snapshots verify
