@@ -23,9 +23,9 @@ jobs:
           distribution: temurin
 
       - name: Build with Maven
-        working-directory: petstore/petstoreapp
+        #working-directory: petstore/petstoreapp
         #run: mvn --batch-mode verify
-        run: mvn clean install
+        run: mvn --batch-mode --update-snapshots verify
 
       - name: List downloaded files1
         run: ls -l
@@ -36,7 +36,6 @@ jobs:
           name: java-app
           #path: '${{ github.workspace }}/target/*.jar'
           path: target/*.jar
-          retention-days: 30
 
       - name: List downloaded files2
         run: ls -l
