@@ -25,7 +25,7 @@ jobs:
       - name: Build with Maven
         working-directory: petstore/petstoreapp
         #run: mvn --batch-mode verify
-        run: mvn --batch-mode --update-snapshots verify
+        run: mvn --batch-mode --update-snapshots verify && mkdir staging && cp target/*.jar staging
 
       - name: List downloaded files1
         run: ls -l
