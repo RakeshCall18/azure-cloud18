@@ -21,12 +21,13 @@ jobs:
         with:
           java-version: '17'
           distribution: temurin
+          cache: maven
 
       - name: Build with Maven
-        working-directory: petstore/petstoreapp
+        #working-directory: petstore/petstoreapp
         #run: mvn --batch-mode verify
         #run: mvn --batch-mode --update-snapshots verify && mkdir staging && cp target/*.jar staging
-        run: mvn -B package --file pom.xml
+        run: mvn -B package --file petstore/petstoreapp/pom.xml
 
       - name: List downloaded files1
         run: ls -l
